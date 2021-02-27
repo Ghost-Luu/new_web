@@ -2,8 +2,6 @@ import React from 'react'
 
 export const SearchPanel = ({param, setParam, users}) => {
     
-    
-
     return <form>
         <div>
             <input type="text" value={param.name} onChange={evt => setParam({
