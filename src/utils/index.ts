@@ -24,7 +24,7 @@ export const useMount = (callback: () => void) => {
 };
 
 // 封装Debounce
-export const useDebounce = (value: unknown, delay?: number): any => {
+export const useDebounce = <T>(value: T, delay?: number) => {
   const [newValue, setNewValue] = useState(value);
   useEffect(() => {
     //每次在value变化以后，设置一个定时器
