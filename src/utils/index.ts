@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const isFalsy = (value: any) => (value === 0 ? false : !value);
+export const isFalsy = (value: unknown) => (value === 0 ? false : !value);
 // !! 将value中的值转换为布尔值
 // 将传入的对象中的value值为空的删除掉
 export const cleanObject = (object: object) => {
@@ -24,7 +24,7 @@ export const useMount = (callback: () => void) => {
 };
 
 // 封装Debounce
-export const useDebounce = (value: any, delay?: number) => {
+export const useDebounce = (value: unknown, delay?: number): any => {
   const [newValue, setNewValue] = useState(value);
   useEffect(() => {
     //每次在value变化以后，设置一个定时器
